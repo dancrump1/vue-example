@@ -19,7 +19,7 @@
     "nuxt-build": "nuxt build",
     "nuxt-dev": "nuxt dev",
     "nuxt-generate": "nuxt generate",
-    "nuxt-start": "node .output/server/index.mjs",
+    "nuxt-start": "NITRO_PORT=4000 node .output/server/index.mjs",
     "nuxt-preview": "nuxt preview",
     "nuxt-postinstall": "nuxt prepare"
   },
