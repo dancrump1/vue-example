@@ -1,19 +1,23 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import HeroSection from '../components/HeroSection.vue'
+import FeaturesSection from '../components/FeaturesSection.vue'
+import CTASection from '../components/CTASection.vue'
+import BlogSection from '../components/BlogSection.vue'
+import FooterSection from '../components/FooterSection.vue'
+</script>
 
 <template>
-  <section>
-    <h1>Welcome to Paws & Play Dog Park</h1>
-    <p>
-      A friendly place for dogs and humans. Check park hours, rules, and upcoming events.
-    </p>
-    <ul>
-      <li>Open daily: 6:00 AM – 10:00 PM</li>
-      <li>Small and large dog areas</li>
-      <li>Water stations and shaded seating</li>
-    </ul>
-  </section>
+  <div class="home">
+    <HeroSection />
+    <FeaturesSection />
+    <CTASection />
+    <BlogSection />
+    <FooterSection />
+  </div>
 </template>
 
-<style scoped></style>
-
-
+<style scoped>
+.home {
+  min-height: 100vh;
+}
+</style>
