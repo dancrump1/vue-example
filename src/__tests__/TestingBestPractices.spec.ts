@@ -90,7 +90,7 @@ describe('Vue Testing Best Practices', () => {
                 },
                 methods: {
                     submitForm() {
-                        this.submitted = true
+                        ; (this as any).submitted = true
                     }
                 },
                 template: '<form @submit.prevent="submitForm"><button type="submit">Submit</button></form>',
@@ -100,7 +100,7 @@ describe('Vue Testing Best Practices', () => {
             const wrapper = mount(mockForm)
             await wrapper.find('form').trigger('submit')
 
-            expect(wrapper.vm.submitted).toBe(true)
+            expect((wrapper.vm as any).submitted).toBe(true)
         })
     })
 
@@ -150,8 +150,8 @@ describe('Vue Testing Best Practices', () => {
                 async mounted() {
                     // Simulate API call
                     await new Promise(resolve => setTimeout(resolve, 50))
-                    this.data = 'Loaded Data'
-                    this.loading = false
+                        ; (this as any).data = 'Loaded Data'
+                        ; (this as any).loading = false
                 },
                 template: '<div><div v-if="loading">Loading...</div><div v-else>{{ data }}</div></div>',
                 name: 'AsyncComponent'

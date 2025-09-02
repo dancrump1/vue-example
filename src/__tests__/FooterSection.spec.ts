@@ -131,7 +131,7 @@ describe('FooterSection', () => {
 
         // Test input interaction
         await emailInput.setValue('test@example.com')
-        expect(emailInput.element.value).toBe('test@example.com')
+        expect((emailInput.element as HTMLInputElement).value).toBe('test@example.com')
 
         // Test button click
         await subscribeButton.trigger('click')
