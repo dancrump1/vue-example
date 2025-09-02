@@ -13,7 +13,7 @@ const navigateTo = (path: string) => {
     <header class="header">
       <nav class="nav">
         <div class="nav-brand">
-          <h1 class="brand-title">🐕 Paws & Play</h1>
+          <span class="brand-title">🐕 Paws & Play</span>
         </div>
         <div class="nav-links">
           <a href="/" @click.prevent="navigateTo('/')" class="nav-link">Home</a>
